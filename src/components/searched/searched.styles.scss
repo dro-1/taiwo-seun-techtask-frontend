@@ -1,4 +1,4 @@
-section.favorites {
+section.searched {
   margin: 2rem 0;
   padding: 1rem;
   h2 {
@@ -17,12 +17,12 @@ section.favorites {
     width: 90%;
     height: 1px;
     background-color: #ddd;
-    margin: 4rem auto;
+    margin: 2rem auto;
   }
 }
 
 @media screen and (min-width: 550px) {
-  section.favorites {
+  section.searched {
     div.wrapper {
       grid-template-columns: 1fr 1fr;
     }
@@ -30,7 +30,7 @@ section.favorites {
 }
 
 @media screen and (min-width: 800px) {
-  section.favorites {
+  section.searched {
     div.wrapper {
       grid-template-columns: 1fr 1fr 1fr;
     }
@@ -38,7 +38,7 @@ section.favorites {
 }
 
 @media screen and (min-width: 1050px) {
-  section.favorites {
+  section.searched {
     div.wrapper {
       grid-template-columns: 1fr 1fr 1fr 1fr;
       max-width: 1200px;

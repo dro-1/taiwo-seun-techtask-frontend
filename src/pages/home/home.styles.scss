@@ -17,8 +17,30 @@ div.container {
   }
 
   section.chatbots {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
+    display: grid;
+    &.list {
+      display: block;
+    }
+  }
+}
+
+@media screen and (min-width: 550px) {
+  section.chatbots {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  section.chatbots {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 1050px) {
+  section.chatbots {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }

@@ -5,9 +5,9 @@ import { BotsContext } from "./context/bots.context";
 import { contacts } from "./services/data";
 
 function App() {
-  const { setBots } = useContext(BotsContext);
+  const { addBots } = useContext(BotsContext);
   useEffect(() => {
-    setBots(contacts);
+    addBots(contacts);
   }, []);
 
   return <Home />;
