@@ -4,6 +4,16 @@ section.favorites {
   h2 {
     color: #fff;
     font-size: 2rem;
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
+  }
+  div.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  div.divider {
+    width: 90%;
+    height: 1px;
+    background-color: #ddd;
+    margin: 4rem auto;
   }
 }

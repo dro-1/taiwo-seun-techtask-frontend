@@ -15,4 +15,10 @@ div.container {
       text-align: center;
     }
   }
+
+  section.chatbots {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
 }

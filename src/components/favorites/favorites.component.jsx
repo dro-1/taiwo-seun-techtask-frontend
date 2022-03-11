@@ -5,9 +5,11 @@ export const Favorites = () => {
   return (
     <section className="favorites">
       <h2>Favorites</h2>
-      <div>
+      <div className="wrapper">
+        <ChatbotCard />
         <ChatbotCard />
       </div>
+      <div className="divider" />
     </section>
   );
 };

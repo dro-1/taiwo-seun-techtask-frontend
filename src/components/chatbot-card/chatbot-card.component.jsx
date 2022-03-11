@@ -7,9 +7,9 @@ import starOutlineIcon from "./../../assets/svg/star-outline.svg";
 export const ChatbotCard = () => {
   return (
     <div className="card">
-      <img class="star" src={starFilledIcon} alt="" />
+      <img className="star" src={starFilledIcon} alt="" />
 
-      <img class="user" src={defaultProfile.image} alt="Chatbot" />
+      <img className="user" src={defaultProfile.image} alt="Chatbot" />
 
       <p>{defaultProfile.name}</p>
 
