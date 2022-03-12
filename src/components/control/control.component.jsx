@@ -1,8 +1,8 @@
-import "./control.styles.scss";
+import { useContext } from "react";
 
+import "./control.styles.scss";
 import gridIcon from "./../../assets/svg/grid.svg";
 import listIcon from "./../../assets/svg/list.svg";
-import { useContext } from "react";
 import { BotsContext } from "../../context/bots.context";
 
 export const Control = ({ setSearchText, searchText }) => {

@@ -1,4 +1,5 @@
 import { useContext } from "react";
+
 import { BotsContext } from "../../context/bots.context";
 import { ChatbotCard } from "../chatbot-card/chatbot-card.component";
 import "./searched.styles.scss";

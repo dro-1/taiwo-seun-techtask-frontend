@@ -11,6 +11,7 @@ export const BotsContext = createContext({
   searchBots: () => null,
   sortBots: () => null,
   setView: () => null,
+  getBot: () => null,
 });
 
 const BotsProvider = ({ children }) => {
@@ -85,7 +86,7 @@ const BotsProvider = ({ children }) => {
     let res = [];
     for (let normalBot of normalBots) {
       if (normalBot.name.toLowerCase().includes(text)) {
-        res.push(normalBot);
+        return normalBot;
       }
     }
     for (let favoriteBot of favoriteBots) {
@@ -97,6 +98,19 @@ const BotsProvider = ({ children }) => {
     setSearchedBots(res);
 
     return res;
+  };
+
+  const getBot = (botId) => {
+    for (let normalBot of normalBots) {
+      if (normalBot.id === botId) {
+        return normalBot;
+      }
+    }
+    for (let favoriteBot of favoriteBots) {
+      if (favoriteBot.id === botId) {
+        return favoriteBot;
+      }
+    }
   };
 
   return (
@@ -111,6 +125,7 @@ const BotsProvider = ({ children }) => {
         searchBots,
         sortBots,
         setView,
+        getBot,
       }}
     >
       {children}

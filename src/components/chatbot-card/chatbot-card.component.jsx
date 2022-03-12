@@ -1,14 +1,17 @@
-import "./chatbot-card.styles.scss";
+import { useContext } from "react";
+import { useNavigate } from "react-router-dom";
 
+import "./chatbot-card.styles.scss";
 import starFilledIcon from "./../../assets/svg/star-filled.svg";
 import starOutlineIcon from "./../../assets/svg/star-outline.svg";
-import { useContext } from "react";
 import { BotsContext } from "../../context/bots.context";
 
 export const ChatbotCard = ({ bot }) => {
   const { toggleFavorite, view } = useContext(BotsContext);
+  const navigate = useNavigate();
+
   return view == "grid" ? (
-    <div className="card grid">
+    <div onClick={() => navigate(`/profile/${bot.id}`)} className="card grid">
       <button onClick={() => toggleFavorite(bot)}>
         <img
           className="star"
