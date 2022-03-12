@@ -34,10 +34,14 @@ export const ChatbotCard = ({ bot }) => {
       </button>
 
       <img className="user" src={bot.image} alt="Chatbot" />
+      <div className="info">
+        <p>{bot.name}</p>
 
-      <p>{bot.name}</p>
-
-      <em>Created on {bot.created}</em>
+        <div className="date">
+          <em>Created on:</em>
+          <em>{new Date(bot.created).toDateString()}</em>
+        </div>
+      </div>
     </div>
   );
 };

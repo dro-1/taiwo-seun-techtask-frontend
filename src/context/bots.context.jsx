@@ -20,8 +20,13 @@ const BotsProvider = ({ children }) => {
   const [view, setView] = useState("grid");
 
   const sortBots = (orderType) => {
-    const dateSortFn = (bot1, bot2) =>
-      new Date(bot1.created).getTime() - new Date(bot2.created).getTime();
+    const dateSortFn = (bot1, bot2) => {
+      let date1 = new Date(bot1.created).getTime();
+      let date2 = new Date(bot2.created).getTime();
+      if (!date1) date1 = Infinity;
+      if (!date2) date2 = Infinity;
+      return date1 - date2;
+    };
 
     const nameSortFn = (bot1, bot2) => {
       let bot1Name = bot1.name.toLowerCase();

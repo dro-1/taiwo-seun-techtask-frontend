@@ -18,19 +18,21 @@ export const Control = ({ setSearchText, searchText }) => {
           onChange={(e) => setSearchText(e.target.value)}
           placeholder="Search"
         />
-        <div className="order">
-          <button onClick={() => sortBots("name")}>Order by Name</button>
-          <button onClick={() => sortBots("creation")}>
-            Order by Creation
-          </button>
-        </div>
-        <div className="view">
-          <button onClick={() => setView("grid")}>
-            <img src={gridIcon} alt="" />
-          </button>
-          <button onClick={() => setView("list")}>
-            <img src={listIcon} alt="" />
-          </button>
+        <div className="btns">
+          <div className="order">
+            <button onClick={() => sortBots("name")}>Order by Name</button>
+            <button onClick={() => sortBots("creation")}>
+              Order by Creation
+            </button>
+          </div>
+          <div className="view">
+            <button onClick={() => setView("grid")}>
+              <img src={gridIcon} alt="" />
+            </button>
+            <button onClick={() => setView("list")}>
+              <img src={listIcon} alt="" />
+            </button>
+          </div>
         </div>
       </div>
     </div>

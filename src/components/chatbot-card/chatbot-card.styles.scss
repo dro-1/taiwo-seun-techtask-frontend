@@ -82,7 +82,25 @@ div.card.list {
     justify-content: center;
     align-items: center;
   }
+
   p {
     margin-right: 1rem;
+  }
+
+  div.info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+  }
+
+  div.date {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    em {
+      font-style: normal;
+    }
   }
 }

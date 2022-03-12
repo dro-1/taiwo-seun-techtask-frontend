@@ -4,7 +4,8 @@ div.controls-container {
     color: #fff;
     text-align: center;
     font-size: 2.5rem;
-    margin: 2rem 0;
+    padding-top: 2rem;
+    margin-bottom: 2rem;
   }
   div.controls {
     input {
@@ -17,6 +18,7 @@ div.controls-container {
       border-radius: 1rem;
       padding: 0.5rem 1rem;
       font-size: 1.8rem;
+      max-width: 750px;
     }
     div.order,
     div.view {
@@ -58,6 +60,39 @@ div.controls-container {
           width: 30px;
           height: 30px;
           display: block;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 800px) {
+  div.controls-container {
+    div.controls {
+      div.btns {
+        display: flex;
+        justify-content: space-between;
+        margin-left: auto;
+        margin-right: auto;
+        align-items: center;
+        width: 450px;
+        div.order,
+        div.view {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: auto;
+          margin: 0;
+          button {
+            display: inline-block;
+            margin: 0;
+          }
+        }
+        div.order {
+          width: 290px;
+        }
+        div.view {
+          width: 100px;
         }
       }
     }

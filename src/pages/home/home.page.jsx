@@ -20,9 +20,6 @@ export const Home = () => {
 
   return (
     <div className="container">
-      <header>
-        <h1>bl1p</h1>
-      </header>
       <Control setSearchText={setSearchText} />
       {searchText.length ? (
         <Searched searchedBots={searchedBots} />
