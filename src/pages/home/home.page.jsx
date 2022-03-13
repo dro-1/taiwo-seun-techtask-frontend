@@ -14,8 +14,10 @@ export const Home = () => {
     useContext(BotsContext);
 
   useEffect(() => {
-    let searchRes = searchBots(searchText);
-    setSearchedBots(searchRes);
+    if (searchText.length > 0) {
+      let searchRes = searchBots(searchText);
+      setSearchedBots(searchRes);
+    }
   }, [searchText]);
 
   return (
@@ -26,7 +28,7 @@ export const Home = () => {
       ) : (
         <>
           {favoriteBots.length > 0 && <Favorites favoriteBots={favoriteBots} />}
-          <section className={`chatbots ${view == "list" ? "list" : ""}`}>
+          <section className={`chatbots ${view === "list" ? "list" : ""}`}>
             {normalBots.map((normalBot) => (
               <ChatbotCard key={normalBot.id} bot={normalBot} />
             ))}

@@ -9,7 +9,7 @@ export const Favorites = () => {
   return (
     <section className="favorites">
       <h2>Favorites</h2>
-      <div className={`wrapper ${view == "list" ? "list" : ""}`}>
+      <div className={`wrapper ${view === "list" ? "list" : ""}`}>
         {favoriteBots.map((favoriteBot) => (
           <ChatbotCard key={favoriteBot.id} bot={favoriteBot} />
         ))}

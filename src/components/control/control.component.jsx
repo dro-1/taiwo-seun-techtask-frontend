@@ -20,16 +20,21 @@ export const Control = ({ setSearchText, searchText }) => {
         />
         <div className="btns">
           <div className="order">
-            <button onClick={() => sortBots("name")}>Order by Name</button>
-            <button onClick={() => sortBots("creation")}>
+            <button data-test="order-name" onClick={() => sortBots("name")}>
+              Order by Name
+            </button>
+            <button
+              data-test="order-creation"
+              onClick={() => sortBots("creation")}
+            >
               Order by Creation
             </button>
           </div>
           <div className="view">
-            <button onClick={() => setView("grid")}>
+            <button data-test="view-grid" onClick={() => setView("grid")}>
               <img src={gridIcon} alt="" />
             </button>
-            <button onClick={() => setView("list")}>
+            <button data-test="view-list" onClick={() => setView("list")}>
               <img src={listIcon} alt="" />
             </button>
           </div>

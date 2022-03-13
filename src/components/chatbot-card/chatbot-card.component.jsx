@@ -9,10 +9,9 @@ import { BotsContext } from "../../context/bots.context";
 export const ChatbotCard = ({ bot }) => {
   const { toggleFavorite, view } = useContext(BotsContext);
   const navigate = useNavigate();
-
-  return view == "grid" ? (
+  return view === "grid" ? (
     <div onClick={() => navigate(`/profile/${bot.id}`)} className="card grid">
-      <button onClick={() => toggleFavorite(bot)}>
+      <button data-test="toggle" onClick={() => toggleFavorite(bot)}>
         <img
           className="star"
           src={bot.isFavorite ? starFilledIcon : starOutlineIcon}

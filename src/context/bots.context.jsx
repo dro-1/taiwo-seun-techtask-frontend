@@ -42,11 +42,11 @@ const BotsProvider = ({ children }) => {
       return 0;
     };
 
-    if (orderType == "name") {
+    if (orderType === "name") {
       setNormalBots([...normalBots.sort(nameSortFn)]);
       setFavoriteBots([...favoriteBots.sort(nameSortFn)]);
       setSearchedBots([...searchedBots.sort(nameSortFn)]);
-    } else if (orderType == "creation") {
+    } else if (orderType === "creation") {
       setNormalBots([...normalBots.sort(dateSortFn)]);
       setFavoriteBots([...favoriteBots.sort(dateSortFn)]);
       setSearchedBots([...searchedBots.sort(dateSortFn)]);

@@ -11,7 +11,7 @@ export const Searched = () => {
     <section className="searched">
       <h2>Search Results</h2>
       <div className="divider" />
-      <div className={`wrapper ${view == "list" ? "list" : ""}`}>
+      <div className={`wrapper ${view === "list" ? "list" : ""}`}>
         {searchedBots.map((searchedBot) => (
           <ChatbotCard key={searchedBot.id} bot={searchedBot} />
         ))}
